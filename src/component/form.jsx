@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import  { React, useState } from 'react';
-import logo from '/src/Logo (1).png'; //company logo
-import odt_logo from "/src/odt_logo.png";
+// import logo from '/src/Logo (1).png'; //company logo
+import odt_logo from "/src/White-logo-1 (1).png";
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import {  ToastContainer,toast } from "react-toastify";
@@ -61,11 +61,11 @@ function Form() {
   
   return (
     <>
-      <div className="flex h-screen   dark:bg-slate-800 flex-1 flex-col justify-center px-6 py-12 lg:px-8">
-        <div className="grid grid-flow-row-dense  grid-cols-2 mt-2">
-                  <div className=" sm:mx-auto suctom_login_side border-r-[0.5px]  border-orange-50 sm:w-full sm:max-w-md">
+      <div className="flex  height-main dark:bg-slate-800 flex-1 flex-col justify-center px-6 py-1 lg:px-8">
+        {/* <div className="grid  mt-2"> */}
+                  <div className=" sm:mx-auto    border-orange-50 sm:w-full sm:max-w-md">
                                   {/* <img className="mx-auto h-10 w-auto" src={logo} alt="Your Company" />  comapny logo */}
-                                  <img className="mx-auto h-10 w-auto" src={odt_logo} alt="Your Company" />
+                                  <img className="mx-auto h-8 mb-10 w-8 height-50" src={odt_logo} alt="Your Company" />
                         <h2 className=" text-center dark:text-white text-2xl font-bold leading-9 tracking-tight text-gray-900">
                           Sign in to your account
                         </h2>
@@ -104,32 +104,38 @@ function Form() {
                                     {errorMessage && <p className="error">{errorMessage}</p>}
                                   </div>
                                   <div className="text-sm">
-                                      <a href="/forgot" className="font-semibold py-1.5 text-orange-500 hover:text-indigo-500">
+                                      <a href="/forgot" className="font-semibold py-1.5 text-blue-500 hover:text-blue-500">
                                         Forgot password?
                                       </a>
-                                      <p className="italic text-xs text-gray-400">By signing in, you agree to our  <a href="/privacy" className="font-semibold py-1.5 text-orange-500 hover:text-indigo-500">Privacy Policy. </a></p>
+                                      <p className="italic text-xs text-gray-400">By signing in, you agree to our  <a href="/privacy" className="font-semibold py-1.5 text-blue-500 hover:text-blue-500">Privacy Policy. </a></p>
                                     </div>
                                   
                                   <div>
                                     <button
                                       type="submit"
-                                      className="flex w-full justify-center rounded-md bg-orange-500 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-orange-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-500"
+                                      className="flex w-full justify-center rounded-md bg-blue-500 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500"
                                     >
                                       Sign in
                                     </button>
                                   
                                     
                                   </div>
+                                 
                                 </form>
-                    <p className="mt-10 text-center text-sm p-6 text-gray-500 dark:text-white">
+                                
+                    <p className="mt-1 text-center text-sm p-6 text-gray-500 dark:text-white">
                       Not a member?{' '}
-                      <a href="/signup" className="font-semibold leading-6 text-orange-500 hover:text-indigo-500">
+                      
+                      <a href="/signup" className="font-semibold leading-6 text-blue-500 hover:text-blue-500">
                         Signup
                       </a>
+                      <FcGoogle className='text-3xl text-center cus_mar text-white mt-6' />
                     </p>
+                                  
+                    
                       </div>
-                  <div className="text-left mt-20  ml-10 sm:mx-auto sm:w-full sm:max-w-lg">
-                                <div className='text-white  text-2xl'>Sign in easily using your existing account from <b className="text-amber-500" >Social Accounts</b>. No need to create a new password or remember multiple login credentials.</div>
+                  {/* <div className="text-left mt-20  ml-10 sm:mx-auto sm:w-full sm:max-w-lg">
+                                <div className='text-white  text-2xl'>Sign in easily using your existing account from <b className="text-blue-500" >Social Accounts</b>. No need to create a new password or remember multiple login credentials.</div>
                                   <div className='text-white  border-b-[0.5px] border-orange-50 pb-5 text-2xl'>
                                     Keep the text clear, concise, and easy to understand.
                          Security: If applicable, you can mention that the SSO login process is secure and user credentials are not stored locally.  </div>
@@ -142,10 +148,10 @@ function Form() {
                           </a>  
                     </div>
 
-                      </div>
+                      </div> */}
              <ToastContainer />
         </div>
-      </div>
+      {/* </div>   */}
     </>
   );
 }

@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 //import logo from '/src/Logo (1).png';
-import odt_logo from "/src/odt_logo.png";
+import odt_logo from "/src/White-logo-1 (1).png";
 // eslint-disable-next-line no-unused-vars
 // import {  toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -36,16 +36,13 @@ function Form() {
       alert(error.response.data.error);
     }
   };
-
   return (
-    <div className="flex h-screen dark:bg-slate-800 flex-1 flex-col justify-center px-6 py-12 lg:px-8">
-      <div className="grid grid-flow-row-dense  grid-cols-2 mt-2">
-            <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-              Content
-            </div>
-            <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+    <div className="flex  height-main  dark:bg-slate-800 flex-1 flex-col justify-center lg:px-8">
+      {/* <div className="grid grid-flow-row-dense  grid-cols-2 mt-2"> */}
+            
+            <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-md">
             {/* <img className="mx-auto h-10 w-auto" src={logo} alt="Your Company" /> */}
-            <img className="mx-auto h-10 w-auto" src={odt_logo} alt="Your Company" />
+            <img className="mx-auto h-8 mb-10 w-8 height-50" src={odt_logo} alt="Your Company" />
               <h2 className=" mb-10 text-center dark:text-white text-2xl font-bold leading-9 tracking-tight text-gray-900">
                 Sign up to your account
               </h2>
@@ -78,7 +75,7 @@ function Form() {
                     />
                   </div>
                 </div>
-                <div className="col-span-2">
+                <div className="col-span-2 mt-0">
                   <label htmlFor="email" className="block dark:text-white text-sm font-medium leading-6 text-gray-900">Email</label>
                   <div className="mt-2">
                     <input
@@ -92,9 +89,9 @@ function Form() {
                     />
                   </div>
                 </div>
-                <div > 
+                <div className="mt-0" > 
                   <label htmlFor="password1" className="block dark:text-white text-sm font-medium leading-6 text-gray-900">Password</label>
-                  <div className="mt-2">
+                  <div className="mt-0">
                     <input
                       id="password1"
                       name="password1"
@@ -106,9 +103,9 @@ function Form() {
                     />
                   </div>
                 </div>
-                <div>
+                <div className="mt-0">
                   <label htmlFor="password2" className="block dark:text-white text-sm font-medium leading-6 text-gray-900">Re-enter Password</label>
-                  <div className="mt-2">
+                  <div className="mt-0">
                     <input
                       id="password2"
                       name="password2"
@@ -122,18 +119,18 @@ function Form() {
                   </div>
                 </div>
                 <div className="col-span-2">
-                  <button type="submit" className="flex w-full justify-center rounded-md bg-orange-500 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-orange-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-500">
+                  <button type="submit" className="flex w-full justify-center rounded-md bg-blue-500 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500">
                     Sign up
                   </button>
                 </div>
               </form>
               <p className="mt-1 text-center text-sm p-6 text-gray-500 dark:text-white">
                 Already a member?{' '} 
-                <a href="/" className="font-semibold leading-6 text-orange-500 hover:text-indigo-500">Login</a>
+                <a href="/" className="font-semibold leading-6 text-blue-500 hover:text-blue-500">Login</a>
               </p>
             </div>
       </div>
-    </div>
+    // </div>
   );
 }
 

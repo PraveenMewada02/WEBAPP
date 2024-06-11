@@ -5,6 +5,11 @@ body{
 nav.navbar.navbar-expand-lg.bg-body-tertiary {
   background: rgb(14, 15, 15)  !important;
 }
+mg.mx-auto.h-10.w-auto {
+  width: 100px;
+  height: 49px;
+  margin-bottom: 25px;
+}
 .aix {
   --tw-bg-opacity: 1;
   background-color: rgb(17 24 39 / var(--tw-bg-opacity));
@@ -20,7 +25,7 @@ nav.navbar.navbar-expand-lg.bg-body-tertiary {
 
 .dark\:bg-slate-800 {
   --tw-bg-opacity: 1;
-  background-color: rgb(25, 26, 28) !important;
+  /* background-color: rgb(25, 26, 28) !important; */
  
 }
 .nav {
@@ -46,7 +51,12 @@ margin-right:4px ;
     height:150vh; 
     display:flex;
 }
-
+.height-main {
+  height: 105vh !important;
+}
+.cus_mar{
+margin:0 auto;
+}
 .sidebar {
   height: 100%;
   width: 260px;

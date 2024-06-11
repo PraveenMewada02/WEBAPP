@@ -27,7 +27,7 @@ import AddLocation from './component/AddLocation';
 import Department from './pages/department';
 //import Location from './pages/location';
 //import Iwo from './pages/iwo';
-import AttendWebapp from './pages/webapp';
+// import AttendWebapp from './pages/webapp';
 import OldFetch from './pages/thurtwo';
 
 function App() {
