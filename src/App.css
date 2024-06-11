@@ -108,13 +108,13 @@ h1.edit-profile.mt-6.inline-block svg {
 .content {
   width: 100%;
   position: relative;
-  margin-left: 120px !important;
+  /* margin-left: 120px !important; */
   font-size: 28px;
   padding: 0px 10px;
 }
 .container {
-  /* max-width: 1280px; */
-  margin-right: inherit;
+  width: 100% !important;
+  margin: 0 auto;
 }
 .border-gray-50{
   border: 1px solid #ffffff4a !important; 

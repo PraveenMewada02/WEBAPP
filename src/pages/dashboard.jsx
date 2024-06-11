@@ -1,7 +1,7 @@
 
 // eslint-disable-next-line no-unused-vars
 import React, { useState, useEffect } from 'react';
-import Sidebar from '../component/sidebar'
+// import Sidebar from '../component/sidebar'
 // eslint-disable-next-line no-unused-vars
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -47,7 +47,7 @@ function dashboard() {
       <div className="min-h-full">  
        
         <div className="container main">
-        <div className='sidebar'><Sidebar/></div>
+        {/* <div className='sidebar'><Sidebar/></div> */}
         
         <div className=' contant content ml-auto '>
         <Headertop />
@@ -57,19 +57,19 @@ function dashboard() {
   
             <div className="grid grid-cols-4 gap-4 mt-8 custom_tab">
                             <div className="mx-auto flex max-w-xs flex-col shadow-lg px-4 py-4 gap-y-4">
-                              <dt className="text-xs leading-3 text-black-600">Total IWO</dt>
+                              <dt className="text-xs leading-3 text-black-600">Total Employee</dt>
                               <dd className=" text-3xl font-semibold text-center tracking-tight text-black-900 sm:text-5xl">{Total_IWO}</dd>
                             </div>
                             <div className="mx-auto flex max-w-xs flex-col shadow-lg px-4 py-4 gap-y-4">
-                              <dt className="text-xs leading-3 text-black-600">Single IWO</dt>
+                              <dt className="text-xs leading-3 text-black-600">Late Coming</dt>
                               <dd className="text-3xl font-semibold  text-center tracking-tight text-black-900 sm:text-5xl">{Employees_with_Single_IWO}</dd>
                             </div>
                             <div className="mx-auto flex max-w-xs flex-col shadow-lg px-4 py-4 gap-y-4">
-                              <dt className="text-xs leading-3 text-black-600">Multiple IWO </dt>
+                              <dt className="text-xs leading-3 text-black-600">On Time</dt>
                               <dd className=" text-3xl font-semibold text-center tracking-tight text-black-900 sm:text-5xl">{Employees_with_Multiple_IWO}</dd>
                             </div>
                             <div className="mx-auto flex max-w-xs flex-col shadow-lg px-4 py-4 gap-y-4">
-                              <dt className="text-xs leading-3 text-black-600">Active Employees</dt>
+                              <dt className="text-xs leading-3 text-black-600">Total Present</dt>
                               <dd className=" text-3xl font-semibold  text-center tracking-tight text-black-900 sm:text-5xl">{Active_employees}</dd>
                             </div>
               

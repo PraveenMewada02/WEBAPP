@@ -14,10 +14,10 @@ const user = {
   }
   const navigation = [
     // { name: 'Dashboard', href: '/form', current: true },
-    { name: 'Orders', href: '#', current: false },
+    { name: 'Attendance', href: '#', current: false },
     { name: 'Employee', href: '/employee', current: false },
-    { name: 'IWO', href: '/iwo', current: false },
-    // { name: 'Garnishment', href: '#', current: false },
+    { name: 'Report & Analaysis', href: '/report', current: false },
+    { name: 'All Data', href: '#', current: false },
   ]
   const userNavigation = [
     { name: 'Your Profile', href: '/profile' },
