@@ -1,5 +1,8 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import Headertop from '../component/Headertop'
+import ProfileHeader from '../component/ProfileHeader'
 
 const OldFetch = () => {
   const [startDate, setStartDate] = useState('');
@@ -13,7 +16,7 @@ const OldFetch = () => {
 
   const fetchData = async () => {
     setLoading(true);
-
+console.log(startDate)
     const api_url = `https://api.etimeoffice.com/api/DownloadInOutPunchData?Empcode=${whose}&&FromDate=${startDate}&&ToDate=${endDate}`;
 
     try {
@@ -33,15 +36,27 @@ const OldFetch = () => {
 
   return (
     <div>
-      <h1>Employee In/Out Data</h1>
-      <label>
+         <header className="bg-white bg-gray-800 shadow">
+         
+           
+      
+        </header>
+        <div className="container main">
+        {/* <div className='sidebar'><Sidebar/></div> */}
+        <div className="contant content ml-auto ">
+        <Headertop />
+        <ProfileHeader/>
+          <hr />
+    <div className="form_data">
+      <h4 className='mt-6 '>Employee In/Out Data</h4>
+      <label className='mr-2'>
         Enter whose Attendance record is needed
-        <input 
+        <input className=''
         type="text"
         value={whose}
-        onChange={(e) => setWhose(e.target.value)}/>
-      </label>
-      <label>
+        onChange={(e) => setWhose(e.target.value)} required/>
+      </label >
+      <label className='mr-2'>
         Enter Start Date (format: DD/MM/YYYY):
         <input
           type="text"
@@ -49,7 +64,7 @@ const OldFetch = () => {
           onChange={(e) => setStartDate(e.target.value)}
         />
       </label>
-      <label>
+      <label className='mr-2'>
         Enter End Date (format: DD/MM/YYYY):
         <input
           type="text"
@@ -98,6 +113,9 @@ const OldFetch = () => {
           </tbody>
         </table>
       ) : null}
+    </div>
+    </div>
+    </div>
     </div>
   );
 };

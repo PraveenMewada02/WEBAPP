@@ -145,7 +145,43 @@ h1.edit-profile.mt-6.inline-block svg {
 .h-screen {
   height: 120vh !important;
 }
-
+.form_data label {
+  font-size: 12px;
+}
+.form_data button {
+  background: #45abd4;
+  color: #fff;
+  padding: 10px 24px;
+  font-size: 12px;
+  border-radius: 5px;
+  /* text-transform: uppercase; */
+  margin-left: 20px;
+  font-weight: 700;
+}
+td {
+  font-size: 12px;
+  margin-left: 17px;
+  border: 1px solid;
+  padding: 12px 30px;
+}
+.form_data th {
+  font-size: 12px;
+  font-weight: 300px;
+  border: 1px solid;
+  padding: 12px 20px;
+}
+.form_data  table{
+margin-top:20px;
+}
+.form_data input {
+  background: #d2dde2;
+  color: #000000;
+  padding: 10px;
+  border: 1px solid #000000;
+  font-size: 10px;
+  /* text-transform: uppercase; */
+  margin-left: 4px;
+}
   .custom_logo_side
   {
     width: 180px !important;

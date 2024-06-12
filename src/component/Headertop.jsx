@@ -17,7 +17,7 @@ const user = {
     { name: 'Attendance', href: '#', current: false },
     { name: 'Employee', href: '/employee', current: false },
     { name: 'Report & Analaysis', href: '/report', current: false },
-    { name: 'All Data', href: '#', current: false },
+    { name: 'All Data', href: '/alldata', current: false },
   ]
   const userNavigation = [
     { name: 'Your Profile', href: '/profile' },
