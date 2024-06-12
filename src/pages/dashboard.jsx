@@ -52,9 +52,7 @@ function dashboard() {
         <div className=' contant content ml-auto '>
         <Headertop />
             <ProfileHeader/>
-            
-     
-  
+
             <div className="grid grid-cols-4 gap-4 mt-8 custom_tab">
                             <div className="mx-auto flex max-w-xs flex-col shadow-lg px-4 py-4 gap-y-4">
                               <dt className="text-xs leading-3 text-black-600">Total Employee</dt>

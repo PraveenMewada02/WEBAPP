@@ -30,6 +30,7 @@ import Department from './pages/department';
 // import AttendWebapp from './pages/webapp';
 import OldFetch from './pages/thurtwo';
 import Thurtwo from './pages/thurtwo';
+import Report from './pages/report'
 
 
 function App() {
@@ -59,6 +60,7 @@ function App() {
         <Route path="/addlocation" element={<PrivateRoute><AddLocation /></PrivateRoute>} />
         <Route path="/department" element={<PrivateRoute><Department /></PrivateRoute>} />
         <Route path="/alldata" element={<PrivateRoute><Thurtwo /></PrivateRoute>} />
+        <Route path="/report" element={<PrivateRoute><Report /></PrivateRoute>} />
         {/* <Route path="/location" element={<PrivateRoute><Location /></PrivateRoute>} /> */}
         {/* <Route path="/iwo" element={<PrivateRoute><Iwo /></PrivateRoute>} /> */}
         <Route path="*" element={<Notfound />} />
