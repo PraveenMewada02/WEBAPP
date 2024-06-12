@@ -61,9 +61,6 @@ const OldFetch = () => {
   return (
     <div>
          <header className="bg-white bg-gray-800 shadow">
-         
-           
-      
         </header>
         <div className="container main">
         {/* <div className='sidebar'><Sidebar/></div> */}
