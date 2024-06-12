@@ -3,7 +3,7 @@
 import { React, useState,useEffect } from 'react'
 import Headertop from '../component/Headertop'
 import ProfileHeader from '../component/ProfileHeader'
-import Sidebar from '../component/sidebar'
+// import Sidebar from '../component/sidebar'
 import {  toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import DeleteItemComponent from '../component/DeleteItemComponent';
@@ -53,7 +53,7 @@ function employee(onDeleteSuccess) {
 <div className="min-h-full">
         
         <div className="container main ml-auto">
-        <div className='sidebar'><Sidebar/></div>
+        {/* <div className='sidebar'><Sidebar/></div> */}
         
         <div className=' contant content ml-auto'>
             <Headertop />

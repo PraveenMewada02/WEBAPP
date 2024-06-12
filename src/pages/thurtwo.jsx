@@ -7,7 +7,7 @@ import ProfileHeader from '../component/ProfileHeader'
 const OldFetch = () => {
   const [startDate, setStartDate] = useState('');
   const [endDate, setEndDate] = useState('');
-  const [whose, setWhose] = useState("");
+  const [whose, setWhose] = useState("ALL");
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);
 
