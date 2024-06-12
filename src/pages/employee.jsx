@@ -6,28 +6,28 @@ import ProfileHeader from '../component/ProfileHeader'
 // import Sidebar from '../component/sidebar'
 import {  toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import DeleteItemComponent from '../component/DeleteItemComponent';
+// import DeleteItemComponent from '../component/DeleteItemComponent';
 import { CgImport } from "react-icons/cg";
 import { TiExport } from "react-icons/ti";
 
 
-function employee(onDeleteSuccess) {
+function employee() {
 
 
  
   const id = localStorage.getItem("id");
   const Link = `https://garnishment-backend.onrender.com/User/ExportEmployees/${id}/`;
   // eslint-disable-next-line react-hooks/rules-of-hooks
-  const [data, setData] = useState([]);
+  // const [data, setData] = useState([]);
   
   useEffect(()=>{
   // const name = localStorage.getItem("name");
     const fetchData = async () => {
       try {
-        const id = localStorage.getItem("id");
-        const response = await fetch(`https://garnishment-backend.onrender.com/User/getemployeedetails/${id}/`); // Replace with your API URL
-        const jsonData = await response.json();
-        setData(jsonData.data) ;
+        // const id = localStorage.getItem("id");
+      // const response = await fetch(`https://garnishment-backend.onrender.com/User/getemployeedetails/${id}/`); // Replace with your API URL
+        // const jsonData = await response.json();
+        // setData(jsonData.data) ;
       
         // console.log(jsonData)    
         // console.log(Data)
@@ -87,31 +87,14 @@ function employee(onDeleteSuccess) {
                  </tr>
                </thead>
                
-            {data && (
+           
               
                  <tbody> 
                 
-                {data.map((item,index) => (
-                
-               
-                   <tr key={item.employer_id}>
-                   <td className="border border-slate-300 text-xs">{index + 1}</td>
-                  <td className="border border-slate-300 text-xs">{item.employee_name}</td><td className="border border-slate-300 text-xs">{item.employee_id}</td><td className="border border-slate-300 text-xs">{item.employer_id}</td><td className="border border-slate-300 text-xs">{item.location}</td><td className="border border-slate-300 text-xs">{item.department}</td><td className="border border-slate-300 text-xs">{item.minimun_wages}</td><td className="border border-slate-300 text-xs">{item.net_pay}</td><td className="border border-slate-300 text-xs">{item.number_of_garnishment}</td><td className="border border-slate-300 text-xs">{item.pay_cycle} </td><button className="py-2 px-3 text-sm bg-green-300 text-white font-semibold  shadow-md hover:bg-green-800 focus:outline-none focus:ring focus:ring-green-800 focus:ring-opacity-75" id={item.employee_id}>Edit</button><td>
-                  <DeleteItemComponent
-            id={item.employee_id} // Pass the record ID
-            onDeleteSuccess={onDeleteSuccess} // Optional callback for successful deletion
-          />
-                  </td>
-                
-                  </tr>
-                
-              
-  
-                ))}
              </tbody>
             
                
-      )}
+      
   
   </table>
         </div>  
