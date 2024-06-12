@@ -27,7 +27,7 @@ function Form() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://127.0.0.1:8000/User/register', formData);
+      const response = await axios.post('https://web-back-zzo1.onrender.com/User/register', formData);
       if (response.data.message) {
         alert('Registration successful');
         navigate('/');
