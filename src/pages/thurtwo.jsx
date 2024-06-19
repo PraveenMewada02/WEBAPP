@@ -71,6 +71,7 @@ const OldFetch = () => {
     <div className="form_data">
       <h4 className='mt-6 '>Employee In/Out Data</h4>
       <p className='text-sm mt-4'><input type="checkbox" checked={isChecked} onChange={handleCheckboxChange} /> Today</p>
+      {/* <p className='text-sm mt-4'><input type="checkbox" checked={isCheckedlast} onChange={handleCheckboxChangelast} /> Yesterday</p> */}
       
       
       <label className='mr-2'>
