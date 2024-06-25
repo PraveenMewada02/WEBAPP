@@ -6,6 +6,42 @@ import ProfileHeader from '../component/ProfileHeader'
 import { format } from 'date-fns';
 import { toast } from 'react-toastify';
 
+// function getLastDateOfMonth(date = new Date()) {
+//   const year = date.getFullYear();
+//   const month = date.getMonth();
+//   let lastDay = date.getDate() - 1; // Get the previous day (assuming non-December)
+
+//   // December is a special case: set month to 0 (January) and adjust year if necessary
+//   if (month === 11) {
+//     lastDay = 31; // December always has 31 days
+//     year;
+//   }
+
+//   return new Date(year, month, lastDay);
+// }
+const today = new Date();
+// const formattedDate = format(today, 'dd/MM/yyyy');
+// const formattedDatelast = format(today, 'dd/MM/yyyy');
+const lastDay = new Date(today);
+// eslint-disable-next-line no-unused-vars
+lastDay.setDate(today.getDate() - 1);
+
+const dd = lastDay.getDate();
+const ddd = dd.toString().padStart(2, '0');
+
+const mm = lastDay.getMonth()+1; //January is 0!
+const mmm = mm.toString().padStart(2, '0');
+
+const yyyy = lastDay.getFullYear();
+// eslint-disable-next-line no-unused-vars
+const lastDay1 = ddd +'/'+mmm+'/'+yyyy;
+console.log(lastDay1) 
+// console.log(lastDay) 
+
+// Example usage
+
+// const lastDay = getLastDateOfMonth(today);
+
 const OldFetch = () => {
   const [startDate, setStartDate] = useState('');
   const [endDate, setEndDate] = useState('');
@@ -13,7 +49,10 @@ const OldFetch = () => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);
   const [isChecked, setIsChecked] = useState(false);
+  const [isCheckedlast, setIsCheckedlast] = useState(false);
   const currentDate = new Date();
+  // const lastate = new Date(y, m + 1, 0);
+  // const formattedDate1 = format(lastate, 'dd/MM/yyyy');
   const formattedDate = format(currentDate, 'dd/MM/yyyy');
 
   const api_key = "ORANGEDATATECH:HR@Orange:UY7g2#!gWEA6kB8:true";
@@ -28,6 +67,24 @@ const OldFetch = () => {
       setWhose("ALL");
       setStartDate(formattedDate)
       setEndDate(formattedDate)
+      
+     
+      
+    }
+  };
+// this is anothoer funtion 
+  const handleCheckboxChangelast = (event) => {
+    setIsCheckedlast(event.target.checked);
+    console.log(isCheckedlast);
+    
+    if (isCheckedlast) {
+      setWhose("");
+      console.log(lastDay)
+      console.log('from function') 
+    } else {
+      setWhose("ALL");
+      setStartDate(lastDay1)
+      setEndDate(lastDay1)
       
      
       
@@ -70,8 +127,11 @@ const OldFetch = () => {
           <hr />
     <div className="form_data">
       <h4 className='mt-6 '>Employee In/Out Data</h4>
-      <p className='text-sm mt-4'><input type="checkbox" checked={isChecked} onChange={handleCheckboxChange} /> Today</p>
-      {/* <p className='text-sm mt-4'><input type="checkbox" checked={isCheckedlast} onChange={handleCheckboxChangelast} /> Yesterday</p> */}
+      <p className='text-sm mt-4'>
+        <input type="checkbox" id="today" name="today" checked={isChecked} onChange={handleCheckboxChange} /> Today</p>
+
+      <p className='text-sm mt-4'>
+        <input type="checkbox" id="lastday" name="lastday" checked={isCheckedlast} onChange={handleCheckboxChangelast} /> Yesterday</p>
       
       
       <label className='mr-2'>

@@ -31,6 +31,7 @@ import Department from './pages/department';
 import OldFetch from './pages/thurtwo';
 import Thurtwo from './pages/thurtwo';
 import Report from './pages/report'
+import Attendance from './pages/attendance';
 
 
 function App() {
@@ -62,7 +63,7 @@ function App() {
         <Route path="/alldata" element={<PrivateRoute><Thurtwo /></PrivateRoute>} />
         <Route path="/report" element={<PrivateRoute><Report /></PrivateRoute>} />
         {/* <Route path="/location" element={<PrivateRoute><Location /></PrivateRoute>} /> */}
-        {/* <Route path="/iwo" element={<PrivateRoute><Iwo /></PrivateRoute>} /> */}
+        <Route path="/attendance" element={<PrivateRoute><Attendance /></PrivateRoute>} />
         <Route path="*" element={<Notfound />} />
      
       

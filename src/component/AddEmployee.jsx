@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import {React, useState} from 'react'
 import Headertop from '../component/Headertop'
-import Sidebar from '../component/sidebar'
+// import Sidebar from '../component/sidebar'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 // eslint-disable-next-line no-unused-vars
@@ -87,28 +87,27 @@ function AddEmployee() {
 <div className="min-h-full">
        
         <div className="container main ml-auto">
-        <div className='sidebar'><Sidebar/></div>
+        {/* <div className='sidebar'><Sidebar/></div> */}
         
         <div className=' contant content ml-auto '>
         <Headertop />
-            <h2 className='font-bold Ctext-base mb-6'>Add Employee</h2>
+            <h2 className='font-bold Ctext-base mt-5 mb-6'>Add Employee</h2>
             <hr />
-            <form className=" grid grid-cols-2 gap-4 border-gray-50 rounded-md space-y-6 p-6 shadow-lg shadow-blue-500/50" action="#" method="POST">
-                    
+            <form className=" grid grid-cols-2 gap-4 border-gray-50 rounded-md space-y-6 p-6 shadow-lg shadow-blue-500/50" action="#" method="POST">   
             <div className='hidden'> 
                         
-                        <div className="mt-2 hidden">
-                          <input
-                            id="employer_id"
-                            name="employer_id"
-                             value={employer_id}
-                            type="hidden"
-                            // autoComplete="employee_name"
-                            // onChange={(e) => setEid(e.target.value)}
-                            
-                            className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                          />
-                        </div>
+                          <div className="mt-2 hidden">
+                            <input
+                              id="employer_id"
+                              name="employer_id"
+                              value={employer_id}
+                              type="hidden"
+                              // autoComplete="employee_name"
+                              // onChange={(e) => setEid(e.target.value)}
+                              
+                              className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                            />
+                          </div>
                       </div>
                     <div className=''> 
                         <label htmlFor="name" className="block text-slate-500 text-sm font-medium leading-6">
@@ -252,28 +251,29 @@ function AddEmployee() {
                       
           </div>
 
-          <div >
-      
+          <div className="grid grid-flow-row auto-rows-auto" >
+      <div>
             <button
               type="submit"
              onClick={handleSubmit}
-              className="flex w-full justify-center rounded-md bg-orange-500 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-orange-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-500 custom-btn"
+              className="flex w-full justify-center rounded-md bg-blue-500 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-blue-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 custom-btn"
             >
               ADD
             </button>
             </div>
+           
             <div >
             <button
               type="reset"
               onClick={handleReset}
-              className="flex w-full justify-center rounded-md bg-orange-500 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-orange-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-500"
+              className="flex w-full justify-center rounded-md bg-blue-500 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-blue-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500"
             >
               CANCEL
             </button>
             
            
           </div>
-          
+          </div>
         </form>
 
 
